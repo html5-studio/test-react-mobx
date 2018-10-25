@@ -1,0 +1,72 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    .search-container {
+        position: relative;
+        width: 340px;
+        margin: 400px auto;
+        .input-city {
+            width:100%;
+            padding: 16px;
+            border-radius: 5px;
+            border: 2px solid #b1b3bc;
+            &:focus {
+                outline-width: 0;
+              + label {
+                transform: translate3d(0, -22px, 0);
+              }
+            }
+        }
+        label {
+            padding: 0 10px;
+            position: absolute;
+            background: #fff;
+            top: 15px;
+            left: 8px;
+            color: #000;
+            transform: translate3d(0, 0, 0);
+            transition: all 0.1s ease-in-out;
+        }
+        .container-list {
+            width: 336px;
+            background: #fff;
+            position: absolute;
+            top: 45px;
+            border-radius: 5px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border: 2px solid #b1b3bc;
+            .item-city {
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+        .input-colorize {
+            color: #ff8905;
+            text-decoration: underline;
+        }
+        &.up {
+            .container-list {
+                top: auto;
+                bottom: 47px;
+            }
+            &::before {
+                transform: rotate(180deg);
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: 25px;
+            background: url(../img/arrow.png);
+            width: 37px;
+            height: 25px;
+            zoom: 0.6;
+        }
+    }
+    .not_display {
+        display: none;
+    }
+}
