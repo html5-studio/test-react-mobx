@@ -1,1 +1,1 @@
-# test-react-modx
+# test-react-mobx
